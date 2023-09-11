@@ -1,0 +1,68 @@
+@use "./foreCast/forecast.scss";
+@use "./sideBar/sidebar.scss";
+@use "./MiddleSection/main.scss";
+@use "./CityWeather/cities.scss";
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css);
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Rubik:ital,wght@1,600&display=swap");
+
+$color: rgb(5, 2, 2);
+$bg-white: white;
+$card-bg: #b1aaaab4;
+$boxshadow: 0 0 40px rgba(51, 51, 51, 0.1);
+$skyblue: skyblue;
+$fontfamilt: "Rubik", sans-serif;
+$colorcard: #202b3b;
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: $color !important;
+}
+.containe-fluid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: $fontfamilt;
+  .container {
+    width: 80%;
+    height: 110vh;
+    background-color: #0b131e;
+    display: flex;
+    gap: 2rem;
+  }
+}
+@mixin card($width, $height, $margin) {
+  background-color: $colorcard !important;
+  color: $bg-white;
+  width: $width;
+  height: $height;
+  border-radius: 20px;
+  margin-top: $margin;
+}
+/******main****/
+.middle-container {
+  .card {
+    @include card(100%, 30vh, 10px);
+  }
+}
+
+/***sidebar*****/
+.sidebar-caontainer {
+  .card {
+    @include card(100%, 97vh, 30px);
+  }
+}
+
+/********forecast****/
+.forecast {
+  .card {
+    @include card(100%, 92vh, 60px);
+  }
+}
+/*******cities*****/
+.cities {
+  .card {
+    @include card(100%, 15vh, 10px);
+  }
+}

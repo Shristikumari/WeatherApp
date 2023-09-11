@@ -1,0 +1,53 @@
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$fontfamilt: "Rubik", sans-serif;
+$bg-white: white;
+$color: rgb(5, 2, 2);
+$colorcard: #202b3b;
+
+.forecast {
+  width: 59vw;
+  font-family: $fontfamilt;
+  font-size: 2vh;
+  padding: 30px;
+
+  h1 {
+    font-size: 2vh;
+    text-align: left;
+    margin: 30px;
+  }
+
+  .table {
+    --bs-table-bg: $colorcard !important;
+    --bs-table-color: $bg-white;
+    --bs-table-text-align: center;
+    padding-bottom: 1.5rem;
+
+    table {
+      text-align: center;
+      width: 100%;
+      td {
+        padding: 1.5rem 0.5rem;
+      }
+    }
+  }
+}
+
+/****media query**/
+.forecast {
+  width: 30%;
+
+  @media (min-width: $breakpoint-sm) {
+    width: 15%;
+    padding: 10px;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    width: 40%; // Adjust width for medium screens and above
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    width: 35%; // Adjust width for large screens and above
+  }
+}
